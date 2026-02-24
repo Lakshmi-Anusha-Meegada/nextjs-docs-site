@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Next.js Multi-Language Documentation Portal
 
-## Getting Started
+A high-performance documentation portal built using *Next.js (App Router)* with support for:
 
-First, run the development server:
+- 🌍 Internationalization (i18n)
+- ⚡ Incremental Static Regeneration (ISR)
+- 🐳 Docker containerization
+- 🔍 Full-text search
+- 🌙 Dark / Light theme
+- 📦 Versioned documentation (v1, v2, v3)
+- 📑 Swagger API Reference
+- 📋 Copy-to-clipboard code blocks
+- 💬 Feedback widget
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Objective
+
+This project demonstrates modern web architecture using:
+
+- Static Site Generation (SSG)
+- Incremental Static Regeneration (ISR)
+- Locale-based routing
+- Containerized deployment with Docker
+
+---
+
+## 🌍 Internationalization (i18n)
+
+Supported languages:
+
+- English (en)
+- Spanish (es)
+- French (fr)
+- German (de)
+
+Example routes:
+
+    /en/docs/v1/introduction 
+    /es/docs/v1/introduction 
+    /fr/docs/v1/introduction 
+    /de/docs/v1/introduction
+
+---
+
+## ⚡ Incremental Static Regeneration (ISR)
+
+All documentation pages use:
+
+```js
+export const revalidate = 60;
+
+This ensures pages are regenerated every 60 seconds.
+
 ```
+## Versioned Documentation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Users can switch between:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- v1  
+- v2  
+- v3  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Using the version selector in the header.
 
-## Learn More
+## 🔍 Full-Text Search
 
-To learn more about Next.js, take a look at the following resources:
+Client-side search allows users to search across all documentation content.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌙 Theme Support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Automatic system theme detection
+- Light / Dark toggle
+- Preference stored in localStorage
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📑 API Reference
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Interactive Swagger documentation available at:
+
+/api-reference
+
+Rendered using *swagger-ui-react* from:
+
+public/openapi.json
+
+
+## 🐳 Docker Setup
+
+Build and run using Docker:
+
+bash
+docker-compose up --build
+
+Application runs at:
+
+http://localhost:3000
+
+
+## 💻 Local Development
+
+Install dependencies:
+
+npm install
+
+Run development server:
+
+npm run dev
+
+## 📂 Project Structure
+
+_docs/                    → Markdown documentation content  
+public/openapi.json       → OpenAPI 3.0 specification  
+src/app/                  → App Router pages  
+src/components/           → UI components  
+docker-compose.yml  
+Dockerfile  
+.env.example
+
+
+## 📦 Environment Variables
+
+All required environment variables are documented in:
+
+.env.example
+
+## ✅ Core Requirements Implemented
+
+✔ Docker containerization
+✔ ISR (60 seconds revalidation)
+✔ Multi-language routing (en, es, fr, de)
+✔ Version selector (v1, v2, v3)
+✔ Dark/Light theme toggle
+✔ Full-text search
+✔ Swagger API reference page
+✔ Feedback widget
+✔ Copy-to-clipboard code blocks
+
+## 📜 License
+
+This project was built for educational and evaluation purposes.
+
+## ✅ After Pasting
+
+Run:
+
+bash
+git add .
+git commit -m "Final README update"
+git push
